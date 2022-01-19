@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:background="#ffffffff" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.material.appbar.AppBarLayout android:id="@id/appbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="2.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="enterAlways|scroll">
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.Toolbar android:theme="@style/ToolbarTheme" android:id="@id/toolbar" android:background="@color/colorPrimary" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:elevation="10.0dip" app:layout_scrollFlags="enterAlways|scroll" app:titleTextColor="#ffffffff" style="@style/ActionBar" />
+                </FrameLayout>
+            </LinearLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+        <com.aurelhubert.ahbottomnavigation.AHBottomNavigationViewPager android:id="@id/vp_horizontal_ntb" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/adViewMainScreen" android:layout_below="@id/appbar" />
+        <com.aurelhubert.ahbottomnavigation.AHBottomNavigation android:layout_gravity="bottom" android:id="@id/bottomNavigation" android:background="@color/colorPrimary" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_alignParentBottom="true" />
+        <LinearLayout android:orientation="vertical" android:id="@id/adViewMainScreen" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/bottomNavigation" />
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
